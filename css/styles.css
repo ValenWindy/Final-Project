@@ -1,0 +1,337 @@
+/* All */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Grid */
+.header {
+    grid-area: header;
+    background-image: url(../assets/traycard2.jpg);
+    background-position: center;
+}
+
+.main {
+    grid-area: main;
+    background-color: rgba(37, 0, 245, 0.658);
+    background-position: center;
+}
+
+.footer {
+    grid-area: footer;
+    
+
+}
+
+
+.container-grid > *{
+text-align: center;
+}
+
+
+.container-grid {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 100px auto 100px;
+
+}
+
+/* Breakpoints */
+
+@media screen and (min-width:600px){
+    .container-grid {
+        grid-template-columns: 200 px auto;
+        grid-template-rows: 100px auto 100px;
+    }
+    .nav  {
+        margin-top: 10px;
+        font-size: 28px;
+    
+    }
+
+    .main-title {
+        display: flex;
+        position: fixed;
+        margin: 10px;
+    }
+}
+@media screen and (min-width:900px){
+
+    .container-grid {
+        grid-template-columns: 200 px auto;
+        grid-template-rows: 150px auto 200px;
+    }
+
+    .row-image {
+        width: 100%;
+        background-repeat: no-repeat;
+    }
+    .main-title {
+        display: flex;
+        position: fixed;
+        margin: 20px;
+    }
+    
+
+
+
+    
+    .footer {
+    background-image: url(../assets/traycard3.jpg);
+    background-position: center;
+    
+}
+
+}
+
+
+
+
+/* Header y Nav */
+
+
+
+.main-title {
+    color: #ff0000;
+    position: absolute;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+
+
+.nav {
+    padding: 25px;
+    flex-direction: row-reverse;
+}
+
+.nav a {
+    font-size: 20px;
+}
+
+
+
+
+
+/* Main */
+
+main {
+    padding: 60px 0;
+
+    width: 100%;
+}
+
+.carousel-item {
+    width: 100%;
+}
+
+.title-inicio {
+    color: rgb(6, 2, 221);
+    text-align: center;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(222, 238, 130);
+}
+
+.title {
+    color: #eee;
+    text-align: center;
+    -webkit-text-stroke: 1px;
+}
+/* Main - About Us */
+
+.title-us {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 40px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: violet; 
+}
+
+
+.container-about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.image-about-us{
+    display: block;
+    width: 300px;
+    height: 200px;
+
+}
+
+
+.container-text {
+    width: 100%;
+    justify-content: center;
+    color: white;
+    
+}
+
+.container-text h3 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(0, 255, 115);
+}
+
+
+/* Main - Clientes */
+
+.title-clients {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: violet;
+}
+
+.clientes:hover {
+    transform:scale(1.1,1.1);
+    transition: 3s;
+}
+/* Main - Servicios */
+
+.services:hover {
+    transform:scale(1.1,1.1);
+    transition: 3s;
+}
+
+
+
+
+/* Main - Preguntas Frecuentes */
+.faq  {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    -webkit-text-stroke: 1px;
+}
+
+
+
+
+
+
+
+
+
+/* Main - Contacto */
+
+.form-registrer {
+    width: 90%;
+    padding: 30px;
+    margin: auto;
+    font-family: Constantia;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    background-color: darkcyan;
+    box-shadow: 7px 10px 37px #000;
+}
+
+.form-registrer h4 {
+    font-family: 'Constantine';
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20 px;
+}
+
+.control {
+    width: 100%;
+    background:black;
+    padding: 30px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 20px;
+
+}
+
+.mensaje {
+    width: 100%;
+    background:black;
+    padding: 30px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-registrer p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    height: 40px;
+}
+
+
+
+
+.button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+}
+
+/* Footer */
+
+
+.row-image {
+    background-image: url(../assets/traycard3.jpg);
+    background-repeat:repeat-x;
+    width: 100%;
+}
+
+.col h3,address {
+    color: #fff;
+}
+footer h3 {
+    padding: 20px 0;
+    color: #fff;
+}
+
+.col h4 {
+    color: #fff;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(255, 0, 76);
+    font-size: 30px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+footer img:hover {
+    transform: scale(2,2);
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.linea {
+    border: 1px solid aqua;
+    width: 200px;
+    margin: auto;
+}
+
+span {
+        color: aqua;
+}
