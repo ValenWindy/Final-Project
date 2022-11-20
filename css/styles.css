@@ -47,79 +47,29 @@ text-align: center;
 
 }
 
-/* Breakpoints */
-
-@media screen and (min-width:600px){
-    .container-grid {
-        grid-template-columns: 200 px auto;
-        grid-template-rows: 100px auto 100px;
-    }
-    .nav  {
-        margin-top: 10px;
-        font-size: 28px;
-    
-    }
-
-    .main-title {
-        display: flex;
-        position: fixed;
-        margin: 10px;
-    }
-}
-@media screen and (min-width:900px){
-
-    .container-grid {
-        grid-template-columns: 200 px auto;
-        grid-template-rows: 150px auto 200px;
-    }
-
-    .row-image {
-        width: 100%;
-        background-repeat: no-repeat;
-    }
-    .main-title {
-        display: flex;
-        position: fixed;
-        margin: 20px;
-    }
-    
-
-
-
-    
-    .footer {
-    background-image: url(../assets/traycard3.jpg);
-    background-position: center;
-    
-}
-
-}
-
-
-
 
 /* Header y Nav */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+nav {
+    padding: 25px;
+    flex-direction: row; 
+    
+}
 
+nav a {
+    font-size: 18px;
+}
 
 .main-title {
-    color: #ff0000;
-    position: absolute;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #fff;
-}
-
-
-.nav {
-    padding: 25px;
-    flex-direction: row-reverse;
-}
-
-.nav a {
-    font-size: 20px;
-}
-
-
+    display: flex;
+    margin-left: 10px;
+    height: 50px;
+}    
 
 
 
@@ -127,13 +77,9 @@ text-align: center;
 
 main {
     padding: 60px 0;
-
     width: 100%;
 }
 
-.carousel-item {
-    width: 100%;
-}
 
 .title-inicio {
     color: rgb(6, 2, 221);
@@ -147,6 +93,7 @@ main {
     text-align: center;
     -webkit-text-stroke: 1px;
 }
+
 /* Main - About Us */
 
 .title-us {
@@ -154,7 +101,6 @@ main {
     text-align: center;
     margin-bottom: 40px;
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: violet; 
 }
 
 
@@ -185,7 +131,6 @@ main {
     color: rgb(255, 255, 255);
     text-align: center;
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: rgb(0, 255, 115);
 }
 
 
@@ -196,21 +141,27 @@ main {
     text-align: center;
     margin-top: 20px;
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: violet;
 }
 
+.card-title-raven {
+    color: rgb(189, 6, 255);
+    -webkit-text-stroke: 1px;
+}
+.card-title-starfire {
+    color: rgb(255, 85, 6);
+    -webkit-text-stroke: 1px;
+}
 .clientes:hover {
-    transform:scale(1.1,1.1);
+    transform:scale(1.1);
     transition: 3s;
 }
+
 /* Main - Servicios */
 
 .services:hover {
     transform:scale(1.1,1.1);
     transition: 3s;
 }
-
-
 
 
 /* Main - Preguntas Frecuentes */
@@ -221,17 +172,9 @@ main {
     -webkit-text-stroke: 1px;
 }
 
-
-
-
-
-
-
-
-
 /* Main - Contacto */
 
-.form-registrer {
+.form-register {
     width: 90%;
     padding: 30px;
     margin: auto;
@@ -243,48 +186,42 @@ main {
     box-shadow: 7px 10px 37px #000;
 }
 
-.form-registrer h4 {
-    font-family: 'Constantine';
-    font-size: 22px;
-    text-align: center;
-    margin-bottom: 20 px;
-}
-
 .control {
     width: 100%;
     background:black;
-    padding: 30px;
-    margin-bottom: 5px;
+    padding: 40px;
+    margin: 10px auto;
     color: white;
     font-size: 20px;
 
 }
 
-.mensaje {
+.control--message {
     width: 100%;
     background:black;
     padding: 30px;
-    margin-bottom: 5px;
+    margin: 10px auto;
     color: white;
 }
 
-.form-registrer p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    height: 40px;
-}
 
 
-
-
-.button {
+.botón {
     width: 100%;
-    padding: 10px;
-    margin: 10px;
+    height: 50%;
+    padding: 20px;
+    margin: 10px 0px;
+    cursor: pointer;
     background-color: white;
 }
 
+.warning { 
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #b06ab3;
+    padding-top: 20px;
+}
 /* Footer */
 
 
@@ -334,4 +271,42 @@ footer img:hover {
 
 span {
         color: aqua;
+}
+
+
+/* Breakpoints  */
+
+/* Breakpoints */
+
+@media screen and (min-width:600px){
+    .container-grid {
+        grid-template-columns: 200 px auto;
+        grid-template-rows: 100px auto 100px;
+    }
+    nav a  {
+        font-size: 25px;
+    
+    }
+
+}
+@media screen and (min-width:900px){
+
+    .container-grid {
+        grid-template-columns: 200 px auto;
+        grid-template-rows: 150px auto 200px;
+    }
+
+    .row-image {
+        width: 100%;
+        background-position: center;
+    }
+
+
+    .card-clientes {
+        height: 50%;
+    }
+    .footer {
+    background-image: url(../assets/traycard3.jpg);
+    width: 100%;   
+    }
 }
