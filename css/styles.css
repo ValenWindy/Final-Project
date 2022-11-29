@@ -80,7 +80,28 @@ main {
     width: 100%;
 }
 
+.main-logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 
+
+
+.main-images img{
+    height: 150px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+.main-images img:hover {
+    transform: scale(1.2,1.2);
+    filter: blur(0.5px);
+    transition: all 3s;
+}
 .title-inicio {
     color: rgb(6, 2, 221);
     text-align: center;
@@ -215,13 +236,7 @@ main {
     background-color: white;
 }
 
-.warning { 
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    color: #b06ab3;
-    padding-top: 20px;
-}
+
 /* Footer */
 
 
@@ -274,7 +289,6 @@ span {
 }
 
 
-/* Breakpoints  */
 
 /* Breakpoints */
 
@@ -283,6 +297,18 @@ span {
         grid-template-columns: 200 px auto;
         grid-template-rows: 100px auto 100px;
     }
+
+    .main-logo {
+        height: 200px;
+    }
+    
+    .main-images img{
+        height: 300px;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+        margin-right: 5px;
+    }
+
     nav a  {
         font-size: 25px;
     
@@ -295,6 +321,7 @@ span {
         grid-template-columns: 200 px auto;
         grid-template-rows: 150px auto 200px;
     }
+
 
     .row-image {
         width: 100%;
