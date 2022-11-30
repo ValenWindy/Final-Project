@@ -8,11 +8,13 @@
 
 html {
     height: 100%;
+    
 }
 
 body {
     min-height: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 /* Grid */
@@ -51,8 +53,9 @@ text-align: center;
 /* Header y Nav */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    
 }
 
 nav {
@@ -94,14 +97,28 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
+    position: relative;
+    animation-name: main;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
     
 }
 
+@keyframes main {
+    0%   {left:0px; top:0px;}
+    25%  {left:50px; top:0px;}
+    50%  {left:-50px; top:0px;}
+    75%  {left:-50px; top:50px;}
+    100% {left:0px; top:0px;}
+}
+
 .main-images img:hover {
-    transform: scale(1.2,1.2);
+    transform: scale(1.1,1.1);
     filter: blur(0.5px);
     transition: all 3s;
 }
+
 .title-inicio {
     color: rgb(6, 2, 221);
     text-align: center;
@@ -186,13 +203,43 @@ main {
 
 
 /* Main - Preguntas Frecuentes */
+
+.accordion {
+    margin-top: 15px !important;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+@keyframes fadeInRight {
+    from {
+    opacity: 0;
+    transform: translateX(100px);
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+
 .faq  {
     text-align: center;
     font-size: 30px;
     margin-top: 50px;
     -webkit-text-stroke: 1px;
+    position: relative;
+    animation-name: faq;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+
 }
 
+@keyframes faq {
+    0%   {left:0px; top:0px;}
+    25%  {left:10px; top:0px;}
+    50%  {left:-10px; top:0px;}
+    75%  {left:-10px; top:10px;}
+    100% {left:0px; top:0px;}
+}
 /* Main - Contacto */
 
 .form-register {
@@ -273,7 +320,7 @@ footer img {
 }
 
 footer img:hover {
-    transform: scale(2,2);
+    transform: scale(1.5,1.5);
     transition: 0.5s;
     object-fit: cover;
 }
